@@ -1,0 +1,175 @@
+let name = "marie";
+let age = "17";
+let address = "manchester";
+
+function displayPerson () {
+    console.log(`Her name is..${name}, she is ${age} years old`)
+}
+
+function displayName() {
+    console.log(`Her name is ${name}`)
+}
+
+let person = {
+    name: "Jono",
+    age: 19,
+    address: "Liverpool",
+    displayPerson: function(){
+        (`Her name is ${name}, she is ${age} years old`)
+    },
+    displayName: function(){
+        `Her name is ${this.name}`
+    }
+}
+
+console.log(person.displayName())
+
+
+class Animal {
+    constructor(name, species, breed){
+        this.name = name;
+        this.species = species;
+        this.breed = breed;
+    }
+
+    Info(){
+        console.log(`${species} that has ${breed}`);
+    }
+}
+
+let animalA = new Animal("Luci", "feline");
+
+console.log(animalA)
+
+class Animal {
+    constructor(name, species, breed){
+        this.name = name;
+        this.species = species;
+        this.breed = breed;
+    }
+
+    Info(){
+        console.log(`${name} is a ${species} that is a ${breed} breed`)
+    }
+}
+
+let animalA = new Animal("Luci", "feline", "cat");
+
+console.log(animalA)
+
+class Animal {
+    constructor(name, species, breed){
+        this.name = name;
+        this.species = species;
+        this.breed = breed;
+    }
+
+    Info(){
+        console.log(`${name} is a ${species} that is a ${breed} breed`)
+    }
+}
+
+
+class Animal {
+    constructor(name, species, sound){
+        this.name = name;
+        this.species = species;
+        this.sound = sound;
+    }
+
+    showSound(){
+        console.log(`its ${this.sound} sound`);
+    }
+
+    showInfo(){
+        console.log(`its ${this.name} name, ${this.species}`)
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, species, sound, breed){
+        super(name, species, sound);
+        this.breed = breed;
+    }
+
+    showbreed(){
+        console.log(`its ${this.breed} breed`);
+    }
+}
+
+let Sheeba = new Cat("Sheeba", "cat", "britishshorthair", "meowpui");
+
+Sheeba.showInfo()
+Sheeba.showSound()
+
+
+
+class Person {
+    constructor({firstName, lastName, job}) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.job = job;
+        this.skills = [];
+        Person._amount = Person._amount || 0;
+        Person._amount++;
+    }
+
+    static get amount() {
+        return Person._amount;
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    set fullName(fN) {
+        if (/[A-Za-z]\s[A-Za-z]/.test(fN)) {
+            [this.firstName, this.lastName] = fN.split(' ');
+        } else {
+            throw Error('Bad fullName');
+        }
+    }
+
+    learn(skill) {
+        return this.skills.push(skill);
+    }
+}
+
+class Job {
+    constructor(company, position, salary) {
+        this.company = company;
+        this.position = position;
+        this.salary = salary;
+    }
+}
+
+const john = new Person({
+    firstName: 'John',
+    lastName: 'Doe',
+    job: new Job('Youtbe', 'developer', 200000)
+});
+
+const marie = new Person({
+    firstName: 'Marie',
+    lastName: 'Singh',
+    job: new Job('AWS', 'programmer', 150000)
+});
+
+console.log(john.firstName)
+console.log(john.lastName)
+
+console.log(marie.firstName)
+console.log(marie.lastName)
+
+marie.fullName = "Mike Smith";
+console.log(marie.fullName)
+console.log(marie.firstName)
+console.log(marie.lastName)
+
+john.learn('es6');
+john.learn('es7');
+console.log(john.skills)
+
+marie.learn('programming');
+console.log(marie.skills)
+

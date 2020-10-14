@@ -1,0 +1,106 @@
+class Person {
+    constructor(name, address, isMarried) {
+        <this class="name">;
+        <this.class="address">;
+        <this.class="isMarried">;
+    }
+}
+
+let person1 = new Person("Kitana", "Denpasar", false);
+let person2 = new Person("Jane", "Jimbaran", false);
+let person3 = new Person("Marie", "Jakarta", false);
+
+
+class Person {
+
+    constructor(name, address, isMarried){
+        this.name = name;
+        this.address = address;
+        this.isMarried = isMarried;
+    }
+}
+
+let person1 = new Person("marie", "jimbaran", false);
+let person2 = new Person("grey", "pekalongan", false);
+let person3 = new Person("vanny", "bandung", false);
+
+console.log(person1)
+console.log(person2)
+console.log(person3)
+
+
+class Person {
+
+    constructor(name, address, isMarried){
+        this.name = name;
+        this.address = address;
+        this.isMarried = isMarried;
+    }
+}
+
+let name=prompt("name: ");
+let address=prompt("address: ");
+let isMarried=prompt("isMarried: ");
+
+
+class Human {
+    constructor(name, isAlive){
+        this.name = name;
+        this.isAlive = isAlive;
+    }
+}
+
+let mj = new Human("Michael Jordan", true)
+console.log(mj name)
+
+
+
+class Human {
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    introduce() {
+        console.log(`hi, my name is ${this.name}`);
+    }
+
+    work() {
+        console.log("work")
+    }
+}
+
+class Programmer extends Human {
+    constructor(name, addrress, programmingLanguage) {
+        super(name, address);
+        this.programmingLanguage = programmingLanguage;
+    }
+
+    introduce() {
+        super.introduce();
+        console.log(`i can write a programming using these languages`, this.programmingLanguage);
+    );
+}
+
+code() {
+    console.log(
+        "Code some",
+        this.programmingLanguage[
+            Math.floor(Math.random() * this.programmingLanguage.length)
+        ]
+    );
+}
+
+
+const Joni = new Programmer("Joni, "Klaten", "Java");
+
+Joni.code()
+
+let Marie = new Human("Marie Lim", "Jimbaran");
+Marie.introduce()
+Marie.work()
+
+let Marie = new programming("Programmer", "Jimbaran", [PHP, Python]);
+Marie.introduce
+Marie.code 
+Marie.work 
